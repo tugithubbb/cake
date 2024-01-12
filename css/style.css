@@ -1,0 +1,349 @@
+/* GLOBAL */
+/* dùng chung cho cả website */
+
+* {
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+ /* giúp cho chúng ta thêm padding vào thẻ html thì không bị rớt xuống hàng */
+
+} 
+html {
+    font-size: 16px;
+    /* 1rem =16px */
+    /* không khai báo html thì mặc định là 16px */
+    /* chỉ cần khai báo ở đây thì nấu tăng lên thì cả trang web đều tăng */
+}
+
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    color: #212521;
+    background-color: #fff;
+    letter-spacing: 1px;
+    /* dùng chung cho cả website */
+}
+button {
+    background-color: #ff0e83;
+    border: 1px solid white;
+    border-radius: 5px;
+    /* làm cong viền ở ngoài */
+    padding: 13px 23px;
+    /* dùng padding để khai báo cho buttom chứ không dùng height và width */
+    font-size: 0.875rem;
+    cursor: pointer;
+    /* ic bàn tay báo hiệu cho người dùng biết chỗ này kick được */
+    letter-spacing: 1px;
+    transition: all 0.5s;
+}
+button:hover {
+   background-color: white;
+   color: black;
+   border-color: #ff0e83;
+}
+h2 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 3rem;
+    text-align: center;
+    letter-spacing: 2px;
+    /* khai báo chung cho cả website */
+ }
+ 
+
+
+/* HEADER */
+header {
+    background-color: #4e3ab4;
+    padding: 20px 0;
+    /* không nên dùng height */
+    
+}
+.header__content {
+    width: 70%;
+    margin: 0 auto;
+    display: flex;
+    /* muốn thẻ con nằm trên một hàng thì ta phải khai báo thẻ cha chứa nó */
+    justify-content: space-around;
+    /* bắt buộc phải khai báo ở nơi chứa flex bắt buộc khai báo chổ khác thì nó không hiểu */
+    /* tạo khoảng cách nằm ngang  */
+    align-items: center;
+    /* bắt buộc phải khai báo ở nơi chứa flex bắt buộc khai báo chổ khác thì nó không hiểu */
+     /* tạo khoảng cách nằm dọc  */
+}
+
+.header__content ul  {
+   list-style: none;
+   
+  
+   /* dùng để xoá dấu chấm tròn */
+}
+.header__content ul li {
+    display: inline;
+    margin: 0 16px;
+   
+    
+ }
+.header__content a {
+    
+    text-decoration: none;
+    color: white;
+    /* dùng để xoá gạch chân */
+    font-size: 0.75rem;
+    letter-spacing: 2px;
+    font-weight: 700;
+    /* transition-property: all; */
+    /* thay đổi cái gi thì ghi cái đó */
+    /* transition-duration: 1s; */
+    /* tốc độ thay đổi */
+    /* transition-delay: 0s; */
+    /* tốc độ delay */
+    /* transition-timing-function: linear; */
+        transition: all 0.5s ;
+       
+        
+     }
+
+    
+ .header__content p {
+   /* font-size: 37px; */
+   /* 37:16 */
+   font-size: 2.3rem;
+   
+    color: white;
+    
+}
+/* thuộc tính hover thẻ nào thì ta gọi thẻ đó */
+.header__content a:hover {
+    color: #ff0e83;
+ }
+ .header__content ul .active a  {
+    color: #ff0e83;
+    
+   
+   
+ }
+ /* CAROUSEL */
+ .carousel {
+  background-image: url("../img/b3.jpg");
+  height: 800px;
+  /* muốn hiện hình thì ta phải thêm chiều cao */
+  background-size: cover;
+  /* cho nó phủ toàn bộ thì dùng cover */
+  background-position: center;
+  text-align: center;
+  color: white;
+  display: flex;
+  justify-content: center;
+  /* căn chiều ngang */
+  align-items: center;
+  /* căn chiều dọc */
+}
+.carousel__content h1 {
+    font-size: 3.5rem;
+    /* 56:16 */
+ }
+ .carousel__content  p {
+    font-size: 1.1rem;
+    /* 17:16 */
+    padding: 23px 0;
+     }
+    /* INTRO */
+.intro {
+        display: grid;
+        /* grid-template-columns: repeat(4,25%); */
+        /* 4 là cột 25 chiều rông mỗi colum */
+        /* vì số lượng giống nhau nên ta dùng repeat */
+        /* khác nhau thì không dùng */
+        /* mỗi colum có 1/4 */
+        grid-template-columns: repeat(4,1fr);
+         }
+         .intro__ab1 {
+            /* số line bắt đầu của item */
+            /* số line kết thúc */
+            /* số cột mà item chiếm */
+            /* grid-column: 2 / 4; */
+            /* bắt đầu từ 2 và kết thúc 4 */
+            grid-column:2 / span 2  ;
+            /* line bắt đầu số 2 và số cột chiếm 2 */
+            /* gom cột thì ta dùng grid-colum */
+             }
+             .intro__bake {
+                
+                grid-column:1 / span 2  ;
+                /* line bắt đầu là số 1 và chiếm 2 cột */
+                 }
+                 .intro__ab4 {
+                
+                    grid-column:3 / span 2  ;
+                    /* bắt đầu line là dòng thứ 3 và có 3 cột  */
+                   
+                     }
+                    
+                    .intro__item img {
+                   width: 100%;
+                   /* vì kích thước ảnh bị tràn nên ta cho nó bằng kích thước của thẻ char */
+                   display: block;
+                   /* xử lí phần hở vì thẻ img là inline nên ta thay đổi sang block */
+                       
+                      
+                        }
+                        .intro__item{
+                            display: flex;
+                            align-items: center;
+                            text-align: center;
+                            padding: 0 ;
+                                
+                               
+                                 }
+                                 .intro__item h3{
+                                   color: white;
+                                   font-size: 1.5rem;
+                                   font-weight: 700;
+                                   margin-bottom: 16px;
+                                        
+                                       
+                                         }
+                                         .intro__item p{
+                                            font-size: 0.875rem;
+                                            color: #c1c1c1;
+                                            line-height: 29px;
+
+                                                 
+                                                
+                                                  }
+                                 .intro .intro__item:nth-child(1){
+                                    background-color: #4e2a84;
+                                        
+                                       
+                                         }
+                                         .intro .intro__item:nth-child(3){
+                                            background-color: #ff0e83;
+                                                
+                                               
+                                                 }
+                                                 .intro .intro__item:nth-child(4){
+                                                    background-color: #ed6498;
+                                                        
+                                                       
+                                                         }
+                                                         .intro .intro__item:nth-child(6){
+                                                            background-color:#836eaa;
+                                                                
+                                                               
+                                                                 }
+                                                                 .intro .intro__item:nth-child(8){
+                                                                    background-color:#4e2a84;
+                                                                
+                                                                    
+                                                                        
+                                                                       
+                                                                         }
+                                                                         /* muốn các item con nằm trên 1 hàng thì ta dùng flex 
+                                                                          /* 
+                                                                          ví dụ như header
+                                                                          /* thành phần nào chia hàng chia cột thì ta dùng grid */
+                                                                          /* float thì trình duyệt nào cũng hiểu  */
+                                                                        /* khi mà grid và flex khôg dàn layout được thì ta dùng float */
+                                                                        /* khi lấy yêu cầu khách hàng thì phải hỏi khách hàng dùng được trên trinhg duyệt nào  */
+                                                                        /* trình duyệt IE phải 11 trở lên mới dùng được */
+
+
+
+                                                                        /* NUMBER */
+                                                                        .number { 
+                                                                            padding:70px 0; ;
+                                                                               
+                                                                                 }
+
+                                                                        .number__content { 
+                                                                            display: flex;
+                                                                            justify-content: space-around;
+                                                                         width: 70%;
+                                                                         margin: 0 auto;
+                                                                         text-align: center;
+
+                                                                               
+                                                                                 }
+                                                                                 .number__item p:first-of-type { 
+                                                                                   font-size: 2rem;
+                                                                                   color: #4e2a84;
+                                                                                   font-weight: 600;
+        
+                                                                                       
+                                                                                         }
+                                                                                         .number__item p:last-of-type { 
+                                                                                           font-size: 1.4rem;
+                                                                                           font-weight: 700;
+                                                                                           letter-spacing: 2px;
+                                                                                           padding: 24px 0;
+                                                                                                
+                                                                                                  }
+                                                                                                  /* SERVICE */
+                                                                                                  
+                                                                                         .service { 
+                                                                                           background-image: url("../img/s1.jpg");
+                                                                                           background-size: cover;
+                                                                                                 text-align: center;
+                                                                                                   }
+                                                                                                   .service h2 { 
+                                                                                                    color: white;
+                                                                                                    padding: 70px 0;
+                                                                  
+                                                                                                            }
+                                                                                                            .services__item h3 { 
+                                                                                                               font-size: 1.5rem;
+                                                                                                               font-weight: 500;
+                                                                                                               margin: 17px 0;
+                                                                              
+                                                                                                                        }
+                                                                                                                        .services__item p { 
+                                                                                                                            font-size: 0.875rem;
+                                                                                                                            line-height: 25px;
+                                                                                                                            /* chiều cao của các dong */
+                                                                                                                            margin-bottom: 12px;
+                                                                                                                            /* cách phần button */
+                                                                                                                   
+                                                                                           
+                                                                                                                                     }
+                                                                                                                                     .services__item button { 
+                                                                                                                                        padding: 12px 27px;
+                                                                                                                                        border-width: 2px;
+                                                                                                                                        /* chỉnh riêng độ dày của width */
+                                                                                                                               
+                                                                                                       
+                                                                                                                                                 }
+                                                                                                            .services__content { 
+                                                                                                            display: flex;
+                                                                                                            width: 70%;
+                                                                                                            margin: 0 auto;
+                                                                              
+                                                                                                                        }
+                                                                                                                        .services__item { 
+                                                                                                                     padding: 0 20px;
+                                                                                              
+                                                                                                                                        }
+                                                                                                                                        .services__item i:hover { 
+                                                                                                                                            color: #ff0e83;
+                                                                                                                     
+                                                                                                                                                               }
+                                                                                                                                        .services__item i { 
+                                                                                                                                            width: 105px;
+                                                                                                                                            height: 105px;
+                                                                                                                                            line-height: 105px;
+                                                                                                                                            /* căn giữa chữ theo chiều dọc theo thuộc tính line height  */
+                                                                                                                                            border: 1px solid #4e2a84;
+                                                                                                                                            background-color: white;
+                                                                                                                                            color: #4e2a84;
+                                                                                                                                            font-size: 3.75rem;
+                                                                                                                                            border-radius: 50%;
+                                                                                                                                            transition: all 0.5s;
+                                                                                                                                            /* boder radius tạo hình tròn */
+                                                                                                                                            /* cho chiều rộng và chiều dài */
+                                                                                                                                            /* bằng nhau để tạo hình vuông */
+                                                                                                                     
+                                                                                                                                                               }
+
+                                                               
+                                               
+                             
