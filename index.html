@@ -10,9 +10,11 @@
 <!-- FONTSGOOGLE -->
 <!-- bắt buộc phải đứng trên file MAIN -->
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
-
-
-
+<!-- LIGHTBOX CSS -->
+<link rel="stylesheet" href="./css/lightbox.min.css">
+<!-- OWL CAROUSEL css -->
+<link rel="stylesheet" href="./css/owl.carousel.min.css">
+<link rel="stylesheet" href="./css/owl.theme.default.css">
     <!-- MAIN CSS -->
     <link rel="stylesheet" href="./css/style.css">
 </head>
@@ -22,17 +24,18 @@
         <div class="header__content">
             <p>BAKE</p>
             <nav>
-                <ul>
+                <ul id="mainNav">
                     <li class="active"><a href="#">HOME</a></li>
                     <!-- dùng để thông báo cho họ đang biết họ đang ở đâu -->
-                    <li><a href="#">ABOUT</a></li>
-                    <li><a href="#">SERVICE</a></li>
-                    <li><a href="#">GALLERY</a></li>
-                    <li><a href="#">CLIENTS</a></li>
-                    <li><a href="#">CONTACT</a></li>
+                    <li><a href="#intro">ABOUT</a></li>
+                    <li><a href="#service">SERVICE</a></li>
+                    <li><a href="#gallery">GALLERY</a></li>
+                    <li><a href="#feedback">CLIENTS</a></li>
+                    <li><a href="#contact">CONTACT</a></li>
                 </ul>
             </nav>
         </div>
+        <!-- dùng liên kết nội thì ta thêm id cho mỗi phần và gắn ở thanh menu -->
         
     </header>
     <!-- CAROUSEL -->
@@ -46,7 +49,7 @@
         </div>
     </section>
     <!-- INTRO -->
-    <section class="intro">
+    <section class="intro" id="intro">
         <div class="intro__item">
            <div>
             <h3>Tradition</h3>
@@ -120,7 +123,7 @@
 </div>
     </section>
     <!-- SERVICE -->
-    <section class="service">
+    <section class="service" id="service">
         <h2>OUR SERVICES</h2>
         <div class="services__content">
             <div class="services__item">
@@ -150,15 +153,302 @@
         </div>
     </section>
     <!-- GALLERY -->
-    <section class="gallery"></section>
+    <section class="gallery" id="gallery">
+        <h2>OUR GALLERY</h2>
+        <div class="gallery__content">
+            <figure class="gallery__item gallery__g1">
+                <a href="./img/g1.jpg" data-lightbox="gallery">
+                <img src="./img/g1.jpg" alt="">
+                <figcaption class="gallery__overlay">
+                    <h3><span>OUR</span>GALLERY</h3>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+                </figcaption>
+            </a>
+            </figure>
+            <figure class="gallery__item">
+                <a href="./img/g2.jpg" data-lightbox="gallery"> 
+                <img src="./img/g2.jpg" alt="">
+                <figcaption class="gallery__overlay">
+                    <h3><span>OUR</span>GALLERY</h3>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+                </figcaption>
+            </a>
+            
+            </figure>
+            <figure class="gallery__item">
+                <a href="./img/g3.jpg" data-lightbox="gallery">
+                <img src="./img/g3.jpg" alt="">
+                <figcaption class="gallery__overlay">
+                    <h3><span>OUR</span>GALLERY</h3>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+                </figcaption>
+            </a>
+            </figure>
+            <figure class="gallery__item">
+                <a href="./img/g4.jpg" data-lightbox="gallery">
+                <img src="./img/g4.jpg" alt="">
+                <figcaption class="gallery__overlay">
+                    <h3><span>OUR</span>GALLERY</h3>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+                </figcaption>
+            </a>
+            </figure>
+            <figure class="gallery__item">
+                <a href="./img/g5.jpg" data-lightbox="gallery">
+                <img src="./img/g5.jpg" alt="">
+                <figcaption class="gallery__overlay">
+                    <h3><span>OUR</span>GALLERY</h3>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+                </figcaption>
+            </a>
+            </figure>
+            <figure class="gallery__item gallery__g6">
+                <a href="./img/g6.jpg" data-lightbox="gallery">
+                <img src="./img/g6.jpg" alt="">
+                <figcaption class="gallery__overlay">
+                    <h3><span>OUR</span>GALLERY</h3>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+                </figcaption>
+            </a>
+            </figure>
+        </div>
+    </section>
     <!-- TEAM -->
-    <section class="team"></section>
+    <section class="team">
+        <h2>BAKE TEAM</h2>
+        <div class="team__content">
+           <div class="team__item">
+            <img src="./img/t1.jpg" alt="">
+            <div class="team__title">
+                <h3>John Simon</h3>
+                <p>-Cake Maker</p>
+            </div>
+            <div class="team__details">
+                <h3>John Simon</h3>
+                <p class="team__text">-Cake Maker</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus, adipisci.</p>
+                <div class="team__socials">
+                    <i class="fab fa-facebook-f"></i>
+                    <i class="fab fa-twitch"></i>
+                    <i class="fab fa-google-plus-g"></i>
+                </div>
+            </div>
+           </div>
+           <div class="team__item team__item2">
+            <img src="./img/t2.jpg" alt="">
+            <div class="team__title">
+                <h3>John Simon</h3>
+                <p>-Cake Maker</p>
+            </div>
+            <div class="team__details">
+                <h3>John Simon</h3>
+                <p class="team__text">-Cake Maker</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus, adipisci.</p>
+                <div class="team__socials">
+                    <i class="fab fa-facebook-f"></i>
+                    <i class="fab fa-twitch"></i>
+                    <i class="fab fa-google-plus-g"></i>
+                </div>
+            </div>
+           </div>
+           <div class="team__item team__item3">
+            <img src="./img/t3.jpg" alt="">
+            <div class="team__title">
+                <h3>John Simon</h3>
+                <p>-Cake Maker</p>
+            </div>
+            <div class="team__details">
+                <h3>John Simon</h3>
+                <p class="team__text">-Cake Maker</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus, adipisci.</p>
+                <div class="team__socials">
+                    <i class="fab fa-facebook-f"></i>
+                    <i class="fab fa-twitch"></i>
+                    <i class="fab fa-google-plus-g"></i>
+                </div>
+            </div>
+           </div>
+           <div class="team__item team__item4">
+            <img src="./img/t4.jpg" alt="">
+            <div class="team__title">
+                <h3>John Simon</h3>
+                <p>-Cake Maker</p>
+            </div>
+            <div class="team__details">
+                <h3>John Simon</h3>
+                <p class="team__text">-Cake Maker</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus, adipisci.</p>
+                <div class="team__socials">
+                    <i class="fab fa-facebook-f"></i>
+                    <i class="fab fa-twitch"></i>
+                    <i class="fab fa-google-plus-g"></i>
+                </div>
+            </div>
+           </div>
+           <div class="team__item team__item5">
+            <img src="./img/t1.jpg" alt="">
+            <div class="team__title">
+                <h3>John Simon</h3>
+                <p>-Cake Maker</p>
+            </div>
+            <div class="team__details">
+                <h3>John Simon</h3>
+                <p class="team__text">-Cake Maker</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus, adipisci.</p>
+                <div class="team__socials">
+                    <i class="fab fa-facebook-f"></i>
+                    <i class="fab fa-twitch"></i>
+                    <i class="fab fa-google-plus-g"></i>
+                </div>
+            </div>
+           </div>
+           <div class="team__item">
+            <img src="./img/t2.jpg" alt="">
+            <div class="team__title">
+                <h3>John Simon</h3>
+                <p>-Cake Maker</p>
+            </div>
+            <div class="team__details">
+                <h3>John Simon</h3>
+                <p class="team__text">-Cake Maker</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus, adipisci.</p>
+                <div class="team__socials">
+                    <i class="fab fa-facebook-f"></i>
+                    <i class="fab fa-twitch"></i>
+                    <i class="fab fa-google-plus-g"></i>
+                </div>
+            </div>
+           </div>
+        
+        </div>
+    </section>
     <!-- FEEDBACK -->
-    <section class="feedback"></section>
+    <section class="feedback" id="feedback">
+        <h2>TESTIMONALS</h2>
+        <div class="feedback__content">
+            <div class="owl-carousel">
+               <div class="item">
+                <p><i class="fa fa-quote-left"></i> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatem odit similique officiis fugiat quis, nisi sunt? Laudantium assumenda aperiam fugit. <i class="fa fa-quote-right"></i></p>
+                <p class="feedback__name">MARK</p>
+               </div>
+               <div class="item">
+                <p><i class="fa fa-quote-left"></i> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatem odit similique officiis fugiat quis, nisi sunt? Laudantium assumenda aperiam fugit. <i class="fa fa-quote-right"></i></p>
+                <p class="feedback__name">ALLY</p>
+               </div>
+               <div class="item">
+                <p><i class="fa fa-quote-left"></i> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatem odit similique officiis fugiat quis, nisi sunt? Laudantium assumenda aperiam fugit. <i class="fa fa-quote-right"></i></p>
+                <p class="feedback__name">WILLSON</p>
+               </div>
+
+        </div>
+    </section>
     <!-- CONTACT -->
-    <section class="contact"></section>
+    <section class="contact" id="contact">
+        <h2>CONTACT</h2>
+        <div class="contact__form">
+            <form>
+                <input type="text" placeholder="Name">
+                <input type="text" placeholder="Last Name">
+                <input type="text" placeholder="Email">
+                <input type="tel" placeholder="Phone">
+                <textarea cols="30" rows="10" placeholder="Message"></textarea>
+                <button type="submit">Send</button>
+            </form>
+
+        </div>
+        <div class="contact_map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6327748.962832339!2d135.26200698705657!3d39.2492007245762!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5f0b29762750710b%3A0xcdd9d2c73e4bfc63!2zRlBU44K444Oj44OR44Oz44Ob44O844Or44OH44Kj44Oz44Kw44K544ixIOacreW5jOS6i-alreaJgA!5e0!3m2!1szh-TW!2sjp!4v1706118436631!5m2!1szh-TW!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <div class="contact__info">
+            <div class="contact__infoitemt">
+                <i class="fa fa-home"></i>
+                <p> 4780 Melon Street, Japan</p>
+            </div>
+            <div class="contact__infoitemt">
+                <i class="fa fa-phone"></i>
+                <p>0584-74-6132</p>
+            </div>
+            <div class="contact__infoitemt">
+                <i class="fa fa-envelope-open"></i>
+                <p>Bakeshopjp@gmail.com</p>
+            </div>
+        </div>
+    </section>
     <!-- FOOTER -->
-    <section class="footer"></section>
+    <footer>
+        <div class="footer__main">
+            <div class="footer__item">
+                <h3>About Us</h3>
+                <p>We share the love through food by donating to food banks in our Illinois community and by taking care of an orphanage.</p>
+                <p>All this has been made possible because of your support.
+                    Thank you.</p>
+                    <div class="footer__socials">
+                        <i class="fab fa-facebook-f"></i>
+                        <i class="fab fa-twitch"></i>
+                        <i class="fab fa-google-plus-g"></i>
+                    </div>
+
+            </div>
+            <div class="footer__item">
+                <h3>Working Time</h3>
+               <div class="footer__workingtime">
+                <p>Monday</p>
+                <p>9h30 - 18h30</p>
+               </div>
+               <div class="footer__workingtime">
+                <p>Tuesday</p>
+                <p>9h30 - 18h30</p>
+               </div>
+               <div class="footer__workingtime">
+                <p>Wednesday</p>
+                <p>9h30 - 18h30</p>
+               </div>
+               <div class="footer__workingtime">
+                <p>Thursday</p>
+                <p>9h30 - 18h30</p>
+               </div>
+               <div class="footer__workingtime">
+                <p>Friday</p>
+                <p>9h30 - 18h30</p>
+               </div>
+               <div class="footer__workingtime">
+                <p>Saturday</p>
+                <p>9h30 - 18h30</p>
+               </div>
+               <div class="footer__workingtime">
+                <p>Sunday</p>
+                <p>9h30 - 17h00</p>
+               </div>
+            </div>
+            <div class="footer__item">
+                <h3>Twitter Us</h3>
+                <p>WHO WE ARE</p>
+                <p>OUR FOUNDER</p>
+                <p>BOOM CARES</p>
+                <p>WHY BUY FROM US</p>
+                
+                
+            </div>
+            <div class="footer__item">
+                <h3>10% OFF YOUR FIRST ORDER</h3>
+                <form class="footer__sale">
+                    <input type="text" placeholder="name@example.com">
+                    <button type="submit">Send</button>
+                </form>
+                <p>when you sign up for email and/or texts for the latest updates, special offers, and more.
+
+                </p>
+            </div>
+        </div>
+        <div class="footer__copyright">
+            <p>&copy; Copyright 2024 BOOM! By Cindy Joseph,LLC. <span>
+                CyberSoft</span></p>
+        </div>
+    </footer>
+    <!-- Back to top -->
+    <a href="#" class="back-to-top cd-top text-replace js-cd-top">
+        <i class="fa fa-angle-up"></i>
+    </a>
     <script src="./main.js"></script>
     <!-- ta nên thêm ở cuối trước thẻ đóng của thẻ body -->
     <!-- THƯ VIỆN GIÚP CHẠY HIỆU ỨNG JQUERY -->
@@ -174,6 +464,57 @@
     $('.counter').countUp();
 
    </script>
+
+   <!-- LIGHTBOXJS -->
+   <link rel="stylesheet" href="">
+   <script src="./js/lightbox.min.js"></script>
+   <!-- OWL CAROUSEL -->
+   <script src="./js/owl.carousel.min.js"></script>
+   <script>
+ $('.owl-carousel').owlCarousel({
+    loop:true,
+    nav:true,
+    autoplay:true,
+    responsive:{
+        0:{
+            items:1
+        },
+        600:{
+            items:1
+        },
+        1000:{
+            items:1
+        }
+    }
+})
+   </script>
+   <!-- BACK TO UP -->
+   <script src="./js/util.js"></script>
+   <script src="./js/main-backtoup.js"></script>
+   <!-- FIXED NAVBAR -->
+   <script>
+    // Lấy thẻ UL
+    var mainNav = document.getElementById("mainNav");
+
+    // Lấy tất cả thẻ LI trong UL
+    var listNav = mainNav.getElementsByTagName("li");
+
+    // Lặp qua từng thẻ LI và thêm sự kiện click
+    for (var i = 0; i < listNav.length; i++) {
+        listNav[i].addEventListener("click", function () {
+            // Tìm phần tử có class "active" và xóa nó
+            var current = document.querySelector("#mainNav .active");
+            if (current) {
+                current.classList.remove("active"); 
+            }
+
+            // Thêm class "active" vào phần tử được click
+            this.classList.add("active");
+            
+        });
+    }
+</script>
+
   
 </body>
 </html>
